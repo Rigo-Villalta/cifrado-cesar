@@ -2,14 +2,7 @@
 # Como librerias usamos Thinter para entorno gráfico para Python
 ##
 import tkinter as tk
-from tkinter import simpledialog, messagebox, Entry
-import hashlib
-
-####################################################################################
-# Función que encripta la contraseña que el usuario ingresa a SHA256 como proteccion
-#
-def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
+from tkinter import messagebox, Entry
 
 ####################################################################################
 # Lectura del parámetro llave para el cifrado
@@ -37,15 +30,6 @@ def descifrar_cesar(texto, desplazamiento):
         else:
             resultado += caracter
     return resultado
-
-####################################################################################
-# Para descifrar necesita validar que el usuario ingrese la contraseña y usar el parametro almacenado de cifrado
-#
-def verify_password():
-    with open("password.sha256", "r") as file:
-        stored_password_hash = file.read().strip()
-        entered_password = simpledialog.askstring("Verificación", "Ingrese la clave para hacer uso de la llave César y descifrar:", show='*')
-        return hash_password(entered_password) == stored_password_hash
 
 ####################################################################################
 # Si se comprueba al usuario, se procede con el descifrado del mensaje

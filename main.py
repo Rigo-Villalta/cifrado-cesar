@@ -4,43 +4,9 @@
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 import subprocess
-import hashlib
 import os
 
-####################################################################################
-# Función que encripta la contraseña que el usuario ingresa a SHA256 como proteccion
-#
-def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
 
-####################################################################################
-# Si no existe la clave almacenada, genera un archivo y solicita al usuario la clave
-##
-#def verify_password_file():
-#    password_file = "password.sha256"
-#    if not os.path.exists(password_file):
-#        password = simpledialog.askstring("Nueva Contraseña", "Ingrese una nueva contraseña de administración:", show='*')
-#        if password:
-#            hashed_password = hash_password(password)
-#            with open(password_file, "w") as file:
-#                file.write(hashed_password)
-#            messagebox.showinfo("Archivo Creado", "Archivo de contraseña creado.")
-#        else:
-#            messagebox.showerror("Error", "No se ingresó una contraseña. Se cerrará la aplicación.")
-#            exit()
-
-####################################################################################
-# Para realizar cambios en el cifrado cesar o cambio de clave solicita la verificacion de la contraseña
-##
-#def verify_password():
-#    with open("password.sha256", "r") as file:
-#        stored_password_hash = file.read().strip()
-#        entered_password = simpledialog.askstring("Verificación", "Ingrese la contraseña actual:", show='*')
-#        if entered_password is None:
-#            return False
-#        return hash_password(entered_password) == stored_password_hash
-
-####################################################################################
 # Esta funcion valida la existencia del script de configuración
 ##
 def open_config_window():

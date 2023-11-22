@@ -3,39 +3,6 @@
 ##
 import tkinter as tk
 from tkinter import simpledialog, messagebox
-import hashlib
-
-####################################################################################
-# Función que encripta la contraseña que el usuario ingresa a SHA256 como proteccion
-#
-#def hash_password(password):
-#   return hashlib.sha256(password.encode()).hexdigest()
-
-####################################################################################
-# Funcion que solicita la contraseña para usar el modulo de configuración
-#
-#def verify_password():
-#    with open("password.sha256", "r") as file:
-#        stored_password_hash = file.read().strip()
-#        entered_password = simpledialog.askstring("Verificación", "Ingrese la contraseña actual:", show='*')
-#        return hash_password(entered_password) == stored_password_hash
-
-####################################################################################
-# Cambio de contraseña
-#
-# def change_password():
-#    if verify_password():
-#        new_password = simpledialog.askstring("Nueva Contraseña", "Ingrese una nueva contraseña:", show='*')
-#        confirm_password = simpledialog.askstring("Confirmar Contraseña", "Confirme la nueva contraseña:", show='*')
-        
-#        if new_password and new_password == confirm_password:
-#            with open("password.sha256", "w") as file:
-#                file.write(hash_password(new_password))
-#            messagebox.showinfo("Éxito", "Contraseña cambiada correctamente.")
-#        else:
-#            messagebox.showerror("Error", "Las contraseñas no coinciden.")
-#    else:
-#        messagebox.showerror("Error", "Contraseña incorrecta.")
 
 ####################################################################################
 # Lectura del parámetro de cifrado actual
