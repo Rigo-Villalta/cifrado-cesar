@@ -2,7 +2,7 @@
 # Como librerias usamos Thinter para entorno gráfico para Python
 ##
 import tkinter as tk
-from tkinter import messagebox, Entry
+from tkinter import messagebox, Entry, simpledialog
 
 ####################################################################################
 # Lectura del parámetro llave para el cifrado
@@ -77,7 +77,18 @@ def descifrar_window():
     root.mainloop()
 
 ####################################################################################
+# Cambio de parámetro de cifrado para la lectura
+#
+def change_cesar_value():
+    new_value_message = f" Ingrese el nuevo valor de desplazamiento para César [0-25], este valor deberá ser conocido para descifrar el mensaje:"
+    new_value = simpledialog.askinteger("Valor de César", new_value_message, minvalue=0, maxvalue=25)
+    if new_value is not None:
+        with open("config.cfg", "w") as file:
+            file.write(f"cesar = {new_value}\n")
+        descifrar_window()
+
+####################################################################################
 # Funciones iniciales
 ##
 if __name__ == "__main__":
-    descifrar_window()
+    change_cesar_value()

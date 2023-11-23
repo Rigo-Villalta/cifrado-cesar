@@ -73,10 +73,7 @@ def main_window():
     # Botón de créditos
     creditos_button = tk.Button(root, text="👥 Créditos", command=open_creditos_window)
     creditos_button.pack(side='bottom', anchor='sw', pady=10, padx=10)
-    
-    # Configurar Contraseña/Parámetro César
-    conf_button = tk.Button(root, text="Configurar ⚙", command=open_config_window)
-    conf_button.pack(side='bottom', anchor='se', pady=10, padx=10)
+
     root.mainloop()
 
 ####################################################################################
