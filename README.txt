@@ -8,3 +8,9 @@ Por defecto el parametro para César es 3
 
 Si no se encuentra el archivo de configuración, se crea con su valor por defecto  de cifrado césar (3)
 
+Integrantes:
+
+CP121738 - David Cardona,
+MM200462 - Alberto Mendoza,
+VV000329 - Rigoberto Villalta
+

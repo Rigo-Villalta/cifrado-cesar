@@ -56,7 +56,7 @@ def descifrar_window():
     root.title("Descifrar")
 
     # Label principal
-    label = tk.Label(root, text="Mensaje a descifrar:")
+    label = tk.Label(root, text="Mensaje a descifrar (Utilizar el texto en ASCII):")
     label.pack(pady=5)
 
     # Mensaje cifrado
