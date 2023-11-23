@@ -10,7 +10,7 @@ Si no se encuentra el archivo de configuración, se crea con su valor por defect
 
 Integrantes:
 
-CP121738 - David Cardona,
-MM200462 - Alberto Mendoza,
-VV000329 - Rigoberto Villalta
+David Guillermo Cardona Pérez - CP121738
+Alberto Joseph Mendoza Moreno - MM200462 
+Rigoberto Alcides Villalta - VV000329
 
